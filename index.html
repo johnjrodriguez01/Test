@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Breakwall Equity</title>
-  <link rel="stylesheet" href="style.css?v=9" />
+  <link rel="stylesheet" href="style.css?v=10" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -153,31 +153,6 @@
       </div>
     </div>
   </section>
-
-  <!-- STRATEGY STRIP -->
-  <div class="strategy-strip">
-    <div class="strategy-inner">
-      <div class="strategy-item reveal">
-        <div class="strategy-tag">Focus</div>
-        <div class="strategy-value">Enterprise Software</div>
-      </div>
-      <div class="strategy-divider"></div>
-      <div class="strategy-item reveal">
-        <div class="strategy-tag">Strategy</div>
-        <div class="strategy-value">Growth Buyouts</div>
-      </div>
-      <div class="strategy-divider"></div>
-      <div class="strategy-item reveal">
-        <div class="strategy-tag">Founded</div>
-        <div class="strategy-value">2024</div>
-      </div>
-      <div class="strategy-divider"></div>
-      <div class="strategy-item reveal">
-        <div class="strategy-tag">Headquarters</div>
-        <div class="strategy-value">Manhattan Beach, CA</div>
-      </div>
-    </div>
-  </div>
 
   <!-- PORTFOLIO -->
   <section id="portfolio">
@@ -353,15 +328,33 @@
     <div class="contact-inner">
       <div class="section-label reveal">Contact</div>
       <h2 class="contact-headline reveal">
-        Let's build something<br /><em>exceptional together.</em>
+        Connect with <em>us.</em>
       </h2>
       <p class="contact-sub reveal">
         If you are a founder or management team leading a high-impact enterprise software company and are looking for a value-added partner, we would like to hear from you.
       </p>
-      <a href="mailto:info@breakwallequity.com" class="contact-email reveal">info@breakwallequity.com</a>
-      <div class="contact-location reveal">
-        <span>Manhattan Beach, California</span>
-      </div>
+
+      <form class="contact-form reveal" onsubmit="handleContactSubmit(event)" novalidate>
+        <div class="contact-form-row">
+          <div class="contact-form-field">
+            <label class="contact-form-label" for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" class="contact-form-input" placeholder="Your name" required />
+          </div>
+          <div class="contact-form-field">
+            <label class="contact-form-label" for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" class="contact-form-input" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="contact-form-field">
+          <label class="contact-form-label" for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" class="contact-form-input contact-form-textarea" placeholder="Tell us about your company and what you're looking for..." required></textarea>
+        </div>
+        <div class="contact-form-actions">
+          <button type="submit" class="contact-form-submit">Send Message &#8594;</button>
+          <span class="contact-form-success" id="contact-success">Thank you &mdash; we'll be in touch soon.</span>
+        </div>
+      </form>
+
       <div class="contact-social reveal">
         <a href="https://www.linkedin.com/company/breakwallequity/" target="_blank" rel="noopener noreferrer" class="contact-linkedin" aria-label="Breakwall Equity on LinkedIn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -377,7 +370,7 @@
     <div class="footer-inner">
       <div class="footer-left">
         <div class="footer-logo">Breakwall<span>Equity</span></div>
-        <p class="footer-tagline">Enterprise software investing.<br />Founded 2024.</p>
+        <p class="footer-tagline">Enterprise software investing.</p>
       </div>
       <div class="footer-right">
         <nav class="footer-nav">
@@ -396,5 +389,13 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      var success = document.getElementById('contact-success');
+      success.classList.add('visible');
+      e.target.reset();
+    }
+  </script>
 </body>
 </html>
