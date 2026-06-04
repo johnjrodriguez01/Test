@@ -18,7 +18,7 @@
   --text-muted:    #5a5855;
   --text-dim:      #9e9b97;
   --accent:        #0D2145;
-  --accent-dim:    #4A8AC9;
+  --accent-dim:    #0D2145;
   --accent-warm:   #DC4B28;
   --accent-orange: #F3901D;
   --border:        rgba(0,0,0,0.09);
@@ -231,7 +231,7 @@ img { display: block; max-width: 100%; }
 }
 .hero-headline em {
   font-style: italic;
-  color: var(--accent-dim);
+  color: var(--accent-warm);
 }
 
 .hero-sub {
@@ -252,14 +252,14 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text);
-  border-bottom: 1px solid var(--accent-dim);
+  border-bottom: 1px solid var(--accent);
   padding-bottom: 4px;
   transition: color 0.25s, border-color 0.25s, gap 0.25s;
   transition-delay: 0.4s;
 }
 .hero-cta:hover {
-  color: var(--accent);
-  border-color: var(--accent);
+  color: var(--accent-warm);
+  border-color: var(--accent-warm);
   gap: 16px;
 }
 .hero-cta span { font-size: 18px; }
@@ -554,7 +554,7 @@ img { display: block; max-width: 100%; }
   transition: border-color 0.25s, color 0.25s;
 }
 .portfolio-card:hover .portfolio-tags span {
-  border-color: var(--accent-dim);
+  border-color: var(--accent);
   color: var(--text-muted);
 }
 
@@ -702,7 +702,7 @@ img { display: block; max-width: 100%; }
 .team-divider {
   width: 40px;
   height: 1px;
-  background: var(--accent-dim);
+  background: var(--accent-warm);
   margin-bottom: 24px;
 }
 
@@ -789,7 +789,7 @@ img { display: block; max-width: 100%; }
 }
 .contact-headline em {
   font-style: italic;
-  color: var(--accent);
+  color: var(--accent-warm);
 }
 
 .contact-sub {
@@ -807,15 +807,15 @@ img { display: block; max-width: 100%; }
   font-size: clamp(20px, 2.5vw, 32px);
   font-style: italic;
   color: var(--text);
-  border-bottom: 1px solid var(--accent-dim);
+  border-bottom: 1px solid var(--accent);
   padding-bottom: 6px;
   margin-bottom: 32px;
   transition: color 0.25s, border-color 0.25s;
   transition-delay: 0.3s;
 }
 .contact-email:hover {
-  color: var(--accent);
-  border-color: var(--accent);
+  color: var(--accent-warm);
+  border-color: var(--accent-warm);
 }
 
 .contact-location {
@@ -1085,7 +1085,7 @@ footer {
   content: '\00b7';
   position: absolute;
   left: 0;
-  color: var(--accent-dim);
+  color: var(--accent-warm);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.4;
@@ -1190,9 +1190,9 @@ footer {
   transition: border-color 0.25s, color 0.25s, background 0.25s;
 }
 .contact-linkedin:hover {
-  border-color: var(--accent-dim);
-  color: var(--accent-dim);
-  background: rgba(74, 138, 201, 0.08);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(13, 33, 69, 0.08);
 }
 
 /* ============================================================
