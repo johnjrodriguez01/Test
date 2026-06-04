@@ -198,7 +198,7 @@ img { display: block; max-width: 100%; }
   right: -10%;
   width: 60vw;
   height: 60vw;
-  background: radial-gradient(ellipse at center, rgba(15, 38, 64, 0.05) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(30, 58, 95, 0.04) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -261,15 +261,6 @@ img { display: block; max-width: 100%; }
   gap: 16px;
 }
 .hero-cta span { font-size: 18px; }
-
-.hero-scroll-line {
-  position: absolute;
-  bottom: 0;
-  left: var(--gutter);
-  width: 1px;
-  height: 80px;
-  background: linear-gradient(to bottom, transparent, var(--accent-dim));
-}
 
 .desktop-br { display: block; }
 
@@ -469,7 +460,7 @@ img { display: block; max-width: 100%; }
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 2px;
 }
 
@@ -481,15 +472,6 @@ img { display: block; max-width: 100%; }
 }
 .portfolio-card:hover {
   background: var(--bg-card-alt);
-}
-
-.portfolio-card--placeholder {
-  opacity: 0.45;
-}
-.portfolio-card--placeholder .portfolio-logo-text {
-  font-size: 16px !important;
-  letter-spacing: 0.15em !important;
-  font-style: normal !important;
 }
 
 .portfolio-card-inner {
@@ -536,11 +518,6 @@ img { display: block; max-width: 100%; }
   line-height: 1.75;
   color: var(--text-muted);
   margin-bottom: 28px;
-}
-
-.portfolio-desc--muted {
-  color: var(--text-dim);
-  margin-bottom: 0;
 }
 
 .portfolio-tags {
@@ -656,7 +633,7 @@ img { display: block; max-width: 100%; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 40%, rgba(15,38,64,0.07) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 30% 40%, rgba(30,58,95,0.06) 0%, transparent 60%);
 }
 
 .team-photo-img {
@@ -678,7 +655,7 @@ img { display: block; max-width: 100%; }
   font-family: var(--font-serif);
   font-size: 72px;
   font-style: italic;
-  color: rgba(15, 38, 64, 0.18);
+  color: rgba(30, 58, 95, 0.18);
   letter-spacing: -2px;
   position: relative;
   z-index: 1;
@@ -769,7 +746,7 @@ img { display: block; max-width: 100%; }
   left: -10%;
   width: 50vw;
   height: 50vw;
-  background: radial-gradient(ellipse at center, rgba(15, 38, 64, 0.04) 0%, transparent 65%);
+  background: radial-gradient(ellipse at center, rgba(30, 58, 95, 0.04) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -978,4 +955,235 @@ footer {
   .portfolio-card-inner { padding: 32px 28px 36px; }
   .team-info { padding: 28px 24px 36px; }
   .footer-nav { flex-wrap: wrap; gap: 20px; }
+}
+
+
+/* ============================================================
+   HOMEPAGE BLOCKS
+   ============================================================ */
+.homepage-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.homepage-block {
+  background: var(--bg-card);
+  padding: 48px 40px 52px;
+  border: 1px solid var(--border-soft);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+.homepage-block:hover { background: var(--bg-card-alt); }
+.homepage-block-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.homepage-block h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+.homepage-block p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   SECTION INTRO COMPACT
+   ============================================================ */
+.section-intro--compact { margin-bottom: 40px; }
+
+/* ============================================================
+   COLLABORATIVE VALUE CREATION
+   ============================================================ */
+.value-creation {
+  border-top: 1px solid var(--border);
+  padding-top: 48px;
+}
+.value-creation-head { margin-bottom: 32px; }
+.value-creation-sub {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+.value-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.value-col {
+  background: var(--bg-card);
+  padding: 36px 32px 40px;
+  border: 1px solid var(--border-soft);
+}
+.value-col-head {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.value-col-sub {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-dim);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.value-col-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.value-col-list li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  padding-left: 14px;
+  position: relative;
+}
+.value-col-list li::before {
+  content: '\00b7';
+  position: absolute;
+  left: 0;
+  color: var(--accent-dim);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   PORTFOLIO FEATURED
+   ============================================================ */
+.portfolio-featured { margin-top: 0; }
+.portfolio-featured-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ============================================================
+   NEWS
+   ============================================================ */
+#news { border-top: 1px solid var(--border); }
+.news-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.news-card {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  padding: 40px 48px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.3s;
+}
+.news-card:hover { background: var(--bg-card-alt); }
+.news-card-meta {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.news-card-date {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+}
+.news-card-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.news-card-tags span {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+.news-card-title {
+  font-family: var(--font-serif);
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.25;
+  flex: 1;
+  margin: 0;
+}
+.news-card-arrow {
+  font-size: 22px;
+  color: var(--text-dim);
+  flex-shrink: 0;
+  transition: transform 0.25s, color 0.25s;
+}
+.news-card:hover .news-card-arrow {
+  transform: translateX(6px);
+  color: var(--accent);
+}
+
+/* ============================================================
+   CONTACT SOCIAL
+   ============================================================ */
+.contact-social { margin-top: 32px; }
+.contact-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--text-muted);
+  transition: border-color 0.25s, color 0.25s, background 0.25s;
+}
+.contact-linkedin:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(15, 38, 64, 0.05);
+}
+
+/* ============================================================
+   RESPONSIVE — new sections
+   ============================================================ */
+@media (max-width: 900px) {
+  .homepage-blocks { grid-template-columns: 1fr; }
+  .value-cols { grid-template-columns: 1fr; }
+  .news-card { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .news-card-meta { min-width: unset; }
+}
+@media (max-width: 640px) {
+  .homepage-block { padding: 36px 28px 40px; }
+  .value-col { padding: 28px 24px 32px; }
+  .news-card { padding: 28px 24px; }
 }
