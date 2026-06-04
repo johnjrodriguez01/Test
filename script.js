@@ -30,11 +30,13 @@ toggle.addEventListener('click', () => {
   toggle.setAttribute('aria-expanded', open);
   const spans = toggle.querySelectorAll('span');
   if (open) {
-    spans[0].style.transform = 'translateY(6px) rotate(45deg)';
-    spans[1].style.transform = 'translateY(-6px) rotate(-45deg)';
+    spans[0].style.transform = 'translateY(7px) rotate(45deg)';
+    spans[1].style.opacity = '0';
+    spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
   } else {
     spans[0].style.transform = '';
-    spans[1].style.transform = '';
+    spans[1].style.opacity = '';
+    spans[2].style.transform = '';
   }
 });
 
@@ -44,7 +46,8 @@ navLinks.querySelectorAll('a').forEach((link) => {
     navLinks.classList.remove('open');
     const spans = toggle.querySelectorAll('span');
     spans[0].style.transform = '';
-    spans[1].style.transform = '';
+    spans[1].style.opacity = '';
+    spans[2].style.transform = '';
   });
 });
 
