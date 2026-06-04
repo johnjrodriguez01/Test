@@ -173,8 +173,8 @@ img { display: block; max-width: 100%; }
 }
 .nav-toggle span {
   display: block;
-  width: 22px;
-  height: 1px;
+  width: 24px;
+  height: 2px;
   background: var(--text);
   transition: transform 0.3s, opacity 0.3s;
 }
@@ -955,6 +955,14 @@ footer {
   :root { --nav-h: 64px; }
   .nav-logo-img { height: 32px; }
 
+  /* Drop the blur when scrolled: a backdrop-filtered ancestor traps
+     position:fixed children and clips the dropdown to the nav bar */
+  #nav.scrolled {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: var(--bg);
+  }
+
   .nav-links {
     display: none;
     position: fixed;
@@ -968,6 +976,7 @@ footer {
     padding: 32px var(--gutter);
     border-top: 1px solid var(--border);
     overflow-y: auto;
+    z-index: 200;
   }
   .nav-links.open {
     display: flex;
