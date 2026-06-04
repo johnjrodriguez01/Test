@@ -1175,6 +1175,97 @@ footer {
 }
 
 /* ============================================================
+   CONTACT FORM
+   ============================================================ */
+.contact-form {
+  width: 100%;
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+.contact-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.contact-form-row .contact-form-field {
+  margin-bottom: 0;
+}
+.contact-form-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.contact-form-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+  font-size: 15px;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.25s;
+  width: 100%;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+.contact-form-input::placeholder {
+  color: var(--text-dim);
+}
+.contact-form-input:focus {
+  border-bottom-color: var(--accent);
+}
+.contact-form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.contact-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.contact-form-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 12px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.25s;
+}
+.contact-form-submit:hover {
+  background: var(--accent-warm);
+}
+.contact-form-success {
+  font-size: 14px;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.contact-form-success.visible {
+  opacity: 1;
+}
+
+/* ============================================================
    CONTACT SOCIAL
    ============================================================ */
 .contact-social { margin-top: 32px; }
@@ -1208,4 +1299,5 @@ footer {
   .homepage-block { padding: 36px 28px 40px; }
   .value-col { padding: 28px 24px 32px; }
   .news-card { padding: 28px 24px; }
+  .contact-form-row { grid-template-columns: 1fr; gap: 0; }
 }
