@@ -569,9 +569,8 @@ img { display: block; max-width: 100%; }
    QUOTE
    ============================================================ */
 .quote-section {
-  max-width: var(--inner-max);
-  margin: 0 auto;
-  padding: var(--section-pad) var(--gutter);
+  margin: 64px auto 0;
+  padding-top: 56px;
   text-align: center;
   border-top: 1px solid var(--border);
 }
@@ -601,7 +600,7 @@ img { display: block; max-width: 100%; }
    TEAM
    ============================================================ */
 #team {
-  background: var(--bg-soft);
+  background: var(--bg);
   border-top: 1px solid var(--border);
 }
 
@@ -841,7 +840,7 @@ img { display: block; max-width: 100%; }
    FOOTER
    ============================================================ */
 footer {
-  background: var(--bg-soft);
+  background: var(--bg);
   border-top: 1px solid var(--border);
 }
 
