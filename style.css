@@ -12,8 +12,8 @@
 :root {
   --bg:            #FBFAF6;
   --bg-soft:       #F1EDE5;
-  --bg-card:       #ECE6DA;
-  --bg-card-alt:   #E4DDCD;
+  --bg-card:       #FFFFFF;
+  --bg-card-alt:   #F7F5F1;
   --text:          #18181A;
   --text-muted:    #5a5855;
   --text-dim:      #9e9b97;
@@ -361,10 +361,13 @@ img { display: block; max-width: 100%; }
 .pillar {
   background: var(--bg-card);
   padding: 40px 32px 44px;
-  border: 1px solid var(--border-soft);
+  border: 1px solid rgba(24,24,26,0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(24,24,26,0.03), 0 12px 32px rgba(24,24,26,0.05);
   position: relative;
   overflow: hidden;
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 .pillar::before {
   content: '';
@@ -378,7 +381,7 @@ img { display: block; max-width: 100%; }
   transform-origin: left;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.pillar:hover { background: var(--bg-card-alt); }
+.pillar:hover { background: var(--bg-card-alt); box-shadow: 0 6px 16px rgba(24,24,26,0.06), 0 22px 50px rgba(24,24,26,0.09); }
 .pillar:hover::before { transform: scaleX(1); }
 
 .pillar-number {
@@ -468,12 +471,15 @@ img { display: block; max-width: 100%; }
 
 .portfolio-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  transition: background 0.3s, transform 0.3s;
+  border: 1px solid rgba(24,24,26,0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(24,24,26,0.03), 0 12px 32px rgba(24,24,26,0.05);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
   cursor: default;
 }
 .portfolio-card:hover {
-  background: var(--bg-card-alt);
+  background: var(--bg-card-alt); box-shadow: 0 6px 16px rgba(24,24,26,0.06), 0 22px 50px rgba(24,24,26,0.09);
 }
 
 .portfolio-card--placeholder {
@@ -626,13 +632,16 @@ img { display: block; max-width: 100%; }
 
 .team-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-soft);
+  border: 1px solid rgba(24,24,26,0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(24,24,26,0.03), 0 12px 32px rgba(24,24,26,0.05);
   display: flex;
   gap: 0;
   flex-direction: column;
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
 }
-.team-card:hover { background: var(--bg-card-alt); }
+.team-card:hover { background: var(--bg-card-alt); box-shadow: 0 6px 16px rgba(24,24,26,0.06), 0 22px 50px rgba(24,24,26,0.09); }
 
 .team-photo {
   width: 100%;
@@ -1000,12 +1009,15 @@ footer {
 .homepage-block {
   background: var(--bg-card);
   padding: 48px 40px 52px;
-  border: 1px solid var(--border-soft);
+  border: 1px solid rgba(24,24,26,0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(24,24,26,0.03), 0 12px 32px rgba(24,24,26,0.05);
   position: relative;
   overflow: hidden;
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
 }
-.homepage-block:hover { background: var(--bg-card-alt); }
+.homepage-block:hover { background: var(--bg-card-alt); box-shadow: 0 6px 16px rgba(24,24,26,0.06), 0 22px 50px rgba(24,24,26,0.09); }
 .homepage-block-label {
   font-size: 10px;
   font-weight: 600;
@@ -1055,7 +1067,10 @@ footer {
 .value-col {
   background: var(--bg-card);
   padding: 36px 32px 40px;
-  border: 1px solid var(--border-soft);
+  border: 1px solid rgba(24,24,26,0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(24,24,26,0.03), 0 12px 32px rgba(24,24,26,0.05);
 }
 .value-col-head {
   font-family: var(--font-serif);
@@ -1127,13 +1142,16 @@ footer {
   align-items: center;
   gap: 48px;
   background: var(--bg-card);
-  border: 1px solid var(--border-soft);
+  border: 1px solid rgba(24,24,26,0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(24,24,26,0.03), 0 12px 32px rgba(24,24,26,0.05);
   padding: 40px 48px;
   text-decoration: none;
   color: inherit;
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
 }
-.news-card:hover { background: var(--bg-card-alt); }
+.news-card:hover { background: var(--bg-card-alt); box-shadow: 0 6px 16px rgba(24,24,26,0.06), 0 22px 50px rgba(24,24,26,0.09); }
 .news-card-meta {
   min-width: 200px;
   display: flex;
