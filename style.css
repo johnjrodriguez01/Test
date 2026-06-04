@@ -27,7 +27,7 @@
   --font-serif:  'DM Serif Display', Georgia, serif;
   --font-sans:   'Inter', system-ui, -apple-system, sans-serif;
 
-  --nav-h:       90px;
+  --nav-h:       132px;
   --section-pad: clamp(80px, 12vw, 160px);
   --inner-max:   1200px;
   --gutter:      clamp(24px, 5vw, 80px);
@@ -663,7 +663,7 @@ img { display: block; max-width: 100%; }
 }
 
 .nav-logo-img {
-  height: 64px;
+  height: 104px;
   width: auto;
   display: block;
 }
@@ -931,7 +931,8 @@ footer {
 }
 
 @media (max-width: 640px) {
-  :root { --nav-h: 76px; }
+  :root { --nav-h: 96px; }
+  .nav-logo-img { height: 72px; }
 
   .nav-links {
     display: none;
