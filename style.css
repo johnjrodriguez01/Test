@@ -10,10 +10,10 @@
 }
 
 :root {
-  --bg:            #EFEDE8;
-  --bg-soft:       #E4E1DA;
-  --bg-card:       #ffffff;
-  --bg-card-alt:   #F6F4F0;
+  --bg:            #FBFAF6;
+  --bg-soft:       #F1EDE5;
+  --bg-card:       #ECE6DA;
+  --bg-card-alt:   #E4DDCD;
   --text:          #18181A;
   --text-muted:    #5a5855;
   --text-dim:      #9e9b97;
@@ -90,7 +90,7 @@ img { display: block; max-width: 100%; }
   border-bottom: 1px solid transparent;
 }
 #nav.scrolled {
-  background: rgba(239, 237, 232, 0.97);
+  background: rgba(251, 250, 246, 0.97);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom-color: var(--border);
@@ -332,7 +332,7 @@ img { display: block; max-width: 100%; }
 }
 .section-headline em {
   font-style: italic;
-  color: var(--text-muted);
+  color: var(--accent-warm);
 }
 
 .section-intro {
@@ -604,7 +604,7 @@ img { display: block; max-width: 100%; }
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--accent);
   margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
@@ -839,7 +839,7 @@ footer {
 .footer-inner {
   max-width: var(--inner-max);
   margin: 0 auto;
-  padding: 64px var(--gutter);
+  padding: 36px var(--gutter);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -858,7 +858,7 @@ footer {
 .footer-logo span { color: var(--accent); }
 
 .footer-logo-img {
-  height: 88px;
+  height: 52px;
   width: auto;
   display: block;
 }
@@ -1107,7 +1107,7 @@ footer {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--accent-warm);
   margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
@@ -1172,7 +1172,7 @@ footer {
 }
 .news-card-arrow {
   font-size: 22px;
-  color: var(--text-dim);
+  color: var(--accent-warm);
   flex-shrink: 0;
   transition: transform 0.25s, color 0.25s;
 }
