@@ -262,15 +262,6 @@ img { display: block; max-width: 100%; }
 }
 .hero-cta span { font-size: 18px; }
 
-.hero-scroll-line {
-  position: absolute;
-  bottom: 0;
-  left: var(--gutter);
-  width: 1px;
-  height: 80px;
-  background: linear-gradient(to bottom, transparent, var(--accent-dim));
-}
-
 .desktop-br { display: block; }
 
 
